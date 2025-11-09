@@ -119,11 +119,16 @@ const chats = {
       chatMessagesEl.appendChild(div);
     });
     
-    // Add/remove study background class
+    // Add/remove background classes
+    chatPanelEl.classList.remove("study-background", "travel-background", "fun-background", "sports-background");
     if (scenario === "study") {
       chatPanelEl.classList.add("study-background");
-    } else {
-      chatPanelEl.classList.remove("study-background");
+    } else if (scenario === "travel") {
+      chatPanelEl.classList.add("travel-background");
+    } else if (scenario === "fun") {
+      chatPanelEl.classList.add("fun-background");
+    } else if (scenario === "sports") {
+      chatPanelEl.classList.add("sports-background");
     }
   }
   
@@ -166,7 +171,4 @@ const chats = {
   // initial view
   renderChat("study");
   renderSteps("study");
-  
-  // Ensure study background is applied on initial load
-  chatPanelEl.classList.add("study-background");
   

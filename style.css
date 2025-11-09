@@ -344,7 +344,76 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('RingNotebookBG.png') center/cover no-repeat;
+    background: url('ringnotebookbg2.png') center/cover no-repeat;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .chat-panel.travel-background .chat-header {
+    background: rgba(255, 255, 255, 0.01);
+    position: relative;
+    z-index: 2;
+  }
+
+  .chat-panel.travel-background .chat-messages {
+    position: relative;
+  }
+
+  .chat-panel.travel-background .chat-messages::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('travelbg2.png') center/cover no-repeat;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .chat-panel.fun-background .chat-header {
+    background: rgba(255, 255, 255, 0.01);
+    position: relative;
+    z-index: 2;
+  }
+
+  .chat-panel.fun-background .chat-messages {
+    position: relative;
+  }
+
+  .chat-panel.fun-background .chat-messages::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('rizz.jpg') center/cover no-repeat;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .chat-panel.sports-background .chat-header {
+    background: rgba(255, 255, 255, 0.01);
+    position: relative;
+    z-index: 2;
+  }
+
+  .chat-panel.sports-background .chat-messages {
+    position: relative;
+  }
+
+  .chat-panel.sports-background .chat-messages::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('bcourt.jpg') center/cover no-repeat;
     opacity: 0.8;
     pointer-events: none;
     z-index: 0;
@@ -426,6 +495,57 @@
   }
   
   .chat-panel.study-background .msg.sender::before {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    opacity: 0.7;
+  }
+
+  .chat-panel.travel-background .msg.sender {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12) inset,
+                0 0 10px rgba(255, 255, 255, 0.08),
+                0 2px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .chat-panel.travel-background .msg.sender::before {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    opacity: 0.7;
+  }
+
+  .chat-panel.fun-background .msg.sender {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12) inset,
+                0 0 10px rgba(255, 255, 255, 0.08),
+                0 2px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .chat-panel.fun-background .msg.sender::before {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    opacity: 0.7;
+  }
+
+  .chat-panel.sports-background .msg.sender {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12) inset,
+                0 0 10px rgba(255, 255, 255, 0.08),
+                0 2px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .chat-panel.sports-background .msg.sender::before {
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
