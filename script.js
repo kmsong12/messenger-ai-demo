@@ -24,6 +24,12 @@ const chats = {
       { from: "mina", text: "text her rn" },
       { from: "sam", text: "i need a meme to send" },
       { from: "you", text: "messenger.ai finding cute gif and line" }
+    ],
+    calendar: [
+      { from: "sam", text: "lets study together tuesday at 5pm" },
+      { from: "mina", text: "can we do 5:30 instead" },
+      { from: "jay", text: "i will forget unless someone sends calendar" },
+      { from: "you", text: "messenger.ai will make a calendar invite now" }
     ]
   };
   
@@ -97,6 +103,23 @@ const chats = {
         title: "response to chat",
         body: "one playful line, gif suggestion, safety check for tone."
       }
+    ],
+    calendar: [
+      {
+        label: "layer 1",
+        title: "recent topic: meeting time",
+        body: "agent saw time words like tuesday and 530 and saw members agreeing."
+      },
+      {
+        label: "layer 2",
+        title: "picked models",
+        body: "chatgpt to normalize date and time, calendar tool to build .ics."
+      },
+      {
+        label: "layer 3",
+        title: "response to chat",
+        body: ".ics invite created with title study session, date next tuesday 530pm, attendees from chat."
+      }
     ]
   };
   
@@ -120,7 +143,7 @@ const chats = {
     });
     
     // Add/remove background classes
-    chatPanelEl.classList.remove("study-background", "travel-background", "fun-background", "sports-background");
+    chatPanelEl.classList.remove("study-background", "travel-background", "fun-background", "sports-background", "calendar-background");
     if (scenario === "study") {
       chatPanelEl.classList.add("study-background");
     } else if (scenario === "travel") {
@@ -129,6 +152,8 @@ const chats = {
       chatPanelEl.classList.add("fun-background");
     } else if (scenario === "sports") {
       chatPanelEl.classList.add("sports-background");
+    } else if (scenario === "calendar") {
+      chatPanelEl.classList.add("calendar-background");
     }
   }
   
