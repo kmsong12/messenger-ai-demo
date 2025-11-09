@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Messenger.ai Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>We teach AI to use your <em>group chat</em>.</h1>
+      <p class="subtitle">
+        Messenger.ai watches your group chat and brings useful info, plans, scores, or jokes right when you need it—precise, reliable, and always ready.
+      </p>
+      <button id="startDemoBtn" class="primary-btn">Try a demo</button>
+    </div>
+    <div class="hero-visual">
+      <div class="bubble bubble-one">"any good places in boston?"</div>
+      <div class="bubble bubble-two">"when is the game tonight"</div>
+      <div class="bubble bubble-three">"what should i text her lol"</div>
+    </div>
+  </header>
+
+  <!-- DEMO SECTION -->
+  <main class="demo" id="demo">
+    <h2>Group Chat Simulator</h2>
+    <p class="section-text">
+      Pick a topic and watch how Messenger.ai pulls context and replies. See the AI agent in action.
+    </p>
+
+    <div class="demo-layout">
+      <!-- Left side: fake group chat -->
+      <div class="chat-panel">
+        <div class="chat-header">
+          <span class="chat-title" id="chatTitle">Friends GC</span>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <!-- messages inserted by script.js -->
+        </div>
+      </div>
+
+      <!-- Right side: agent steps -->
+      <div class="agent-panel">
+        <div class="scenario-tabs">
+          <button class="scenario-btn active" data-scenario="study">Study tools</button>
+          <button class="scenario-btn" data-scenario="travel">Travel plans</button>
+          <button class="scenario-btn" data-scenario="sports">Sports</button>
+          <button class="scenario-btn" data-scenario="fun">Fun stuff</button>
+        </div>
+        <div class="agent-steps" id="agentSteps">
+          <!-- filled by script.js -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FLOW SECTION -->
+  <section class="flow">
+    <h2>How it works</h2>
+    <p class="section-text">
+      Three simple steps to automate your group chat experience.
+    </p>
+    <div class="flow-steps">
+      <div class="flow-card">
+        <h3>1. Photon iMessage Kit</h3>
+        <p>Reads your Mac chat and sends recent messages to the agent in real-time.</p>
+      </div>
+      <div class="flow-card">
+        <h3>2. Dedalus MCP Agent</h3>
+        <p>Finds the real topic and picks the best model or tool for each request.</p>
+      </div>
+      <div class="flow-card">
+        <h3>3. Messenger.ai</h3>
+        <p>Returns links, info, images, or jokes directly to your group chat.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <footer class="cta">
+    <h2>Ready for live demo?</h2>
+    <p>Connect real iMessage on Mac and point it at this agent. See Messenger.ai work in your actual group chats.</p>
+    <a class="primary-btn" href="https://github.com/yourname/HackPrincetonDedalus" target="_blank">View code</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
