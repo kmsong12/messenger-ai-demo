@@ -103,7 +103,6 @@ const chats = {
   const chatMessagesEl = document.getElementById("chatMessages");
   const agentStepsEl = document.getElementById("agentSteps");
   const scenarioButtons = document.querySelectorAll(".scenario-btn");
-  const startDemoBtn = document.getElementById("startDemoBtn");
   
   function renderChat(scenario) {
     chatMessagesEl.innerHTML = "";
@@ -154,10 +153,6 @@ const chats = {
       renderChat(scenario);
       renderSteps(scenario);
     });
-  });
-  
-  startDemoBtn.addEventListener("click", () => {
-    document.getElementById("demo").scrollIntoView({ behavior: "smooth" });
   });
   
   // initial view
