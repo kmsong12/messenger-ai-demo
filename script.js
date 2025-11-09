@@ -102,6 +102,7 @@ const chats = {
   
   const chatMessagesEl = document.getElementById("chatMessages");
   const agentStepsEl = document.getElementById("agentSteps");
+  const chatPanelEl = document.querySelector(".chat-panel");
   const scenarioButtons = document.querySelectorAll(".scenario-btn");
   
   function renderChat(scenario) {
@@ -117,6 +118,13 @@ const chats = {
       div.textContent = msg.text;
       chatMessagesEl.appendChild(div);
     });
+    
+    // Add/remove study background class
+    if (scenario === "study") {
+      chatPanelEl.classList.add("study-background");
+    } else {
+      chatPanelEl.classList.remove("study-background");
+    }
   }
   
   function renderSteps(scenario) {
@@ -158,4 +166,7 @@ const chats = {
   // initial view
   renderChat("study");
   renderSteps("study");
+  
+  // Ensure study background is applied on initial load
+  chatPanelEl.classList.add("study-background");
   
